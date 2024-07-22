@@ -25,3 +25,9 @@ export const reset = async (user: ResetUser, params: SearchParams) => {
   const res = await api.post(url, user);
   return res as Response<null>;
 };
+
+export const verify = async (params: SearchParams) => {
+  const url = generateUrl(AUTH_URL, "/verify", params);
+  const res = await api.get(url);
+  return res as Response<null>;
+};
