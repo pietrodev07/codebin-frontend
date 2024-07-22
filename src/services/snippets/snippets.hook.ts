@@ -13,7 +13,10 @@ export const useSnippets = create<SnippetsState>((set) => {
       const res = await snippetsService.getSnippets();
       res.success && set({ snippets: res.data });
     },
-    getPrivateSnippet: async () => {},
+    getPrivateSnippet: async (id) => {
+      const res = await snippetsService.getPrivateSnippet(id);
+      res.success && set({ snippet: res.data });
+    },
     getPublicSnippet: async () => {},
     createSnippet: async () => {},
     editSnippet: async () => {},
