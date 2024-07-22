@@ -10,3 +10,9 @@ export interface Response<T> {
   message: string;
   data: T;
 }
+
+export interface ContactBody {
+  email: string;
+  name: string;
+  message: string;
+}
