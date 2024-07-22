@@ -1,3 +1,4 @@
+import { get } from "./api";
 import { SearchParams } from "@/types";
 
 export const SERVER_URL = import.meta.env.VITE_API_BASE_URL;
@@ -25,3 +26,5 @@ export const generateUrl = (
 
   return compelteUrl;
 };
+
+export const api = { get };
