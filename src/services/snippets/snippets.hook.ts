@@ -9,7 +9,9 @@ export const useSnippets = create<SnippetsState>((set, get) => {
     modal: { isOpen: false, data: {} },
     snippets: [],
     snippet: null,
-    toggleModal: () => {},
+    toggleModal: (data) => {
+      set({ modal: { isOpen: !get().modal.isOpen, data: data! } });
+    },
     getSnippets: async () => {
       const res = await snippetsService.getSnippets();
       res.success && set({ snippets: res.data });
