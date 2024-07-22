@@ -70,6 +70,9 @@ devDependencies:
   eslint-plugin-react-refresh:
     specifier: ^0.4.7
     version: 0.4.9(eslint@8.57.0)
+  husky:
+    specifier: ^9.1.1
+    version: 9.1.1
   postcss:
     specifier: ^8.4.39
     version: 8.4.39
@@ -3014,6 +3017,15 @@ packages:
     engines: { node: ">= 0.4" }
     dependencies:
       function-bind: 1.1.2
+
+  /husky@9.1.1:
+    resolution:
+      {
+        integrity: sha512-fCqlqLXcBnXa/TJXmT93/A36tJsjdJkibQ1MuIiFyCCYUlpYpIaj2mv1w+3KR6Rzu1IC3slFTje5f6DUp2A2rg==,
+      }
+    engines: { node: ">=18" }
+    hasBin: true
+    dev: true
 
   /ignore@5.3.1:
     resolution:
