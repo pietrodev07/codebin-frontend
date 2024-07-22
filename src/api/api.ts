@@ -17,3 +17,14 @@ export const post = async (url: string, body: object) => {
 
   return await response.json();
 };
+
+export const put = async (url: string, body: object) => {
+  const response = await fetch(url, {
+    method: "PUT",
+    credentials: "include",
+    body: JSON.stringify(body),
+    headers: { "Content-Type": "application/json" },
+  });
+
+  return await response.json();
+};
