@@ -13,3 +13,9 @@ export const getPrivateSnippet = async (id: string) => {
   const res = await api.get(url);
   return res as Response<Snippet>;
 };
+
+export const getPublicSnippet = async (id: string) => {
+  const url = generateUrl(SNIPPETS_URL, `/${id}`);
+  const res = await api.get(url);
+  return res as Response<Snippet>;
+};
