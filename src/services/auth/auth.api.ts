@@ -37,3 +37,9 @@ export const logout = async () => {
   const res = await api.get(url);
   return res as Response<null>;
 };
+
+export const me = async () => {
+  const url = generateUrl(AUTH_URL, "/me");
+  const res = await api.get(url);
+  return res as Response<null>;
+};

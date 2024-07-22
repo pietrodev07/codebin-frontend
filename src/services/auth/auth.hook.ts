@@ -34,6 +34,10 @@ export const useAuth = create<AuthState>((set) => {
       res.success && set({ isLogged: false });
       renderToast(res.success, res.message);
     },
-    me: async () => {},
+    me: async () => {
+      const res = await authService.me();
+      res.success && set({ isLogged: true });
+      set({ isLoading: false });
+    },
   };
 });
