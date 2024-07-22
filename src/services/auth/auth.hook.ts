@@ -13,7 +13,10 @@ export const useAuth = create<AuthState>((set) => {
       res.success && set({ isLogged: true });
       renderToast(res.success, res.message);
     },
-    register: async () => {},
+    register: async (user) => {
+      const res = await authService.register(user);
+      renderToast(res.success, res.message);
+    },
     forgot: async () => {},
     reset: async () => {},
     verify: async () => {},
