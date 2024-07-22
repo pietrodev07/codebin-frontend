@@ -1,14 +1,18 @@
 import { create } from "zustand";
 
 import { SnippetsState } from "./snippets.model";
+import * as snippetsService from "./snippets.api";
 
-export const useSnippets = create<SnippetsState>(() => {
+export const useSnippets = create<SnippetsState>((set) => {
   return {
     modal: { isOpen: false, data: {} },
     snippets: [],
     snippet: null,
     toggleModal: () => {},
-    getSnippets: async () => {},
+    getSnippets: async () => {
+      const res = await snippetsService.getSnippets();
+      res.success && set({ snippets: res.data });
+    },
     getPrivateSnippet: async () => {},
     getPublicSnippet: async () => {},
     createSnippet: async () => {},
