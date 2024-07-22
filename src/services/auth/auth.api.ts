@@ -31,3 +31,9 @@ export const verify = async (params: SearchParams) => {
   const res = await api.get(url);
   return res as Response<null>;
 };
+
+export const logout = async () => {
+  const url = generateUrl(AUTH_URL, "/logout");
+  const res = await api.get(url);
+  return res as Response<null>;
+};

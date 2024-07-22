@@ -29,7 +29,11 @@ export const useAuth = create<AuthState>((set) => {
       const res = await authService.verify(params);
       renderToast(res.success, res.message);
     },
-    logout: async () => {},
+    logout: async () => {
+      const res = await authService.logout();
+      res.success && set({ isLogged: false });
+      renderToast(res.success, res.message);
+    },
     me: async () => {},
   };
 });
