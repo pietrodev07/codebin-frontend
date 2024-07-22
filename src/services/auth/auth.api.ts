@@ -1,6 +1,6 @@
 import { Response } from "@/types";
 import { AUTH_URL, generateUrl, api } from "@/api";
-import { LoginUser, RegisterUser } from "@/types/user";
+import { ForgotUser, LoginUser, RegisterUser } from "@/types/user";
 
 export const login = async (user: LoginUser) => {
   const url = generateUrl(AUTH_URL, "/login");
@@ -10,6 +10,12 @@ export const login = async (user: LoginUser) => {
 
 export const register = async (user: RegisterUser) => {
   const url = generateUrl(AUTH_URL, "/register");
+  const res = await api.post(url, user);
+  return res as Response<null>;
+};
+
+export const forgot = async (user: ForgotUser) => {
+  const url = generateUrl(AUTH_URL, "/forgot");
   const res = await api.post(url, user);
   return res as Response<null>;
 };

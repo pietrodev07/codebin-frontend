@@ -17,7 +17,10 @@ export const useAuth = create<AuthState>((set) => {
       const res = await authService.register(user);
       renderToast(res.success, res.message);
     },
-    forgot: async () => {},
+    forgot: async (user) => {
+      const res = await authService.forgot(user);
+      renderToast(res.success, res.message);
+    },
     reset: async () => {},
     verify: async () => {},
     logout: async () => {},
