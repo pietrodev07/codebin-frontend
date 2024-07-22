@@ -28,3 +28,12 @@ export const put = async (url: string, body: object) => {
 
   return await response.json();
 };
+
+export const remove = async (url: string) => {
+  const response = await fetch(url, {
+    method: "DELETE",
+    credentials: "include",
+  });
+
+  return await response.json();
+};
