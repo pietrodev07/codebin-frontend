@@ -4,7 +4,7 @@ import { renderToast } from "@/utils/toast";
 import { SnippetsState } from "./snippets.model";
 import * as snippetsService from "./snippets.api";
 
-export const useSnippets = create<SnippetsState>((set) => {
+export const useSnippets = create<SnippetsState>((set, get) => {
   return {
     modal: { isOpen: false, data: {} },
     snippets: [],
@@ -30,6 +30,14 @@ export const useSnippets = create<SnippetsState>((set) => {
       const res = await snippetsService.editSnippet(id, snippet);
       renderToast(res.success, res.message);
     },
-    deleteSnippet: async () => {},
+    deleteSnippet: async (id) => {
+      const res = await snippetsService.deleteSnippet(id);
+      get().toggleModal();
+      res.success &&
+        set((state) => ({
+          snippets: state.snippets.filter((snippet) => snippet.id !== id),
+        }));
+      renderToast(res.success, res.message);
+    },
   };
 });

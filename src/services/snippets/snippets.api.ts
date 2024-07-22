@@ -31,3 +31,9 @@ export const editSnippet = async (id: string, snippet: EditSnippet) => {
   const res = await api.put(url, snippet);
   return res as Response<null>;
 };
+
+export const deleteSnippet = async (id: string) => {
+  const url = generateUrl(SNIPPETS_URL, `/private/${id}`);
+  const res = await api.delete(url);
+  return res as Response<null>;
+};
