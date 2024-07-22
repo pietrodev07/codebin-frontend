@@ -26,7 +26,10 @@ export const useSnippets = create<SnippetsState>((set) => {
       const res = await snippetsService.createSnippet(snippet);
       renderToast(res.success, res.message);
     },
-    editSnippet: async () => {},
+    editSnippet: async (id, snippet) => {
+      const res = await snippetsService.editSnippet(id, snippet);
+      renderToast(res.success, res.message);
+    },
     deleteSnippet: async () => {},
   };
 });

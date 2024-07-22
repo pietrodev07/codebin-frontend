@@ -1,6 +1,6 @@
 import { Response } from "@/types";
 import { api, SNIPPETS_URL, generateUrl } from "@/api";
-import { CreateSnippet, Snippet } from "@/types/snippet";
+import { CreateSnippet, EditSnippet, Snippet } from "@/types/snippet";
 
 export const getSnippets = async () => {
   const url = generateUrl(SNIPPETS_URL, "/private");
@@ -23,5 +23,11 @@ export const getPublicSnippet = async (id: string) => {
 export const createSnippet = async (snippet: CreateSnippet) => {
   const url = generateUrl(SNIPPETS_URL, "/private");
   const res = await api.post(url, snippet);
+  return res as Response<null>;
+};
+
+export const editSnippet = async (id: string, snippet: EditSnippet) => {
+  const url = generateUrl(SNIPPETS_URL, `/private/${id}`);
+  const res = await api.put(url, snippet);
   return res as Response<null>;
 };
