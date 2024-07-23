@@ -9,6 +9,7 @@ import {
   VerifyAccountPage,
   DashboardPage,
   DashboardListPage,
+  DashboardCreatePage,
 } from "@/pages";
 import { PrivateRoute } from "@/components/auth/private-route";
 
@@ -59,6 +60,10 @@ export const router: Router = createBrowserRouter([
       {
         index: true,
         element: <DashboardListPage />,
+      },
+      {
+        path: "create",
+        element: <DashboardCreatePage />,
       },
     ],
   },
