@@ -11,4 +11,5 @@ export { ForgotPasswordPage } from "./auth/forgot";
 export { DashboardPage } from "./dashboard";
 export { DashboardListPage } from "./dashboard/pages/list";
 export { DashboardEditPage } from "./dashboard/pages/edit";
+export { DashboardViewPage } from "./dashboard/pages/view";
 export { DashboardCreatePage } from "./dashboard/pages/create";
