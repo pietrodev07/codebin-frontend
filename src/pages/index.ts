@@ -1,5 +1,6 @@
 export { HomePage } from "./home";
 export { SnippetPage } from "./snippet";
+export { NotFoundPage } from "./not-found";
 
 /* auth pages */
 export { LoginPage } from "./auth/login";

@@ -13,6 +13,7 @@ import {
   DashboardCreatePage,
   DashboardEditPage,
   DashboardViewPage,
+  NotFoundPage,
 } from "@/pages";
 import { PrivateRoute } from "@/components/auth/private-route";
 
@@ -81,5 +82,9 @@ export const router: Router = createBrowserRouter([
         element: <DashboardViewPage />,
       },
     ],
+  },
+  {
+    path: "*",
+    element: <NotFoundPage />,
   },
 ]);
