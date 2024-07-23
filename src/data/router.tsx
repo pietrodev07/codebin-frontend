@@ -6,6 +6,7 @@ import {
   RegisterPage,
   ForgotPasswordPage,
   ResetPasswordPage,
+  VerifyAccountPage,
 } from "@/pages";
 
 type Router = ReturnType<typeof createBrowserRouter>;
@@ -36,6 +37,10 @@ export const router: Router = createBrowserRouter([
       {
         path: "reset",
         element: <ResetPasswordPage />,
+      },
+      {
+        path: "verify",
+        element: <VerifyAccountPage />,
       },
     ],
   },
