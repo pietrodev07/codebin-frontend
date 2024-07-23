@@ -9,3 +9,4 @@ export { ForgotPasswordPage } from "./auth/forgot";
 
 /* dashboard pages */
 export { DashboardPage } from "./dashboard";
+export { DashboardListPage } from "./dashboard/pages/list";

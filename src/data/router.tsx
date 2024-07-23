@@ -8,6 +8,7 @@ import {
   ResetPasswordPage,
   VerifyAccountPage,
   DashboardPage,
+  DashboardListPage,
 } from "@/pages";
 import { PrivateRoute } from "@/components/auth/private-route";
 
@@ -54,5 +55,11 @@ export const router: Router = createBrowserRouter([
         <DashboardPage />
       </PrivateRoute>
     ),
+    children: [
+      {
+        index: true,
+        element: <DashboardListPage />,
+      },
+    ],
   },
 ]);
