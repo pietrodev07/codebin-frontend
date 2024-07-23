@@ -7,7 +7,9 @@ import {
   ForgotPasswordPage,
   ResetPasswordPage,
   VerifyAccountPage,
+  DashboardPage,
 } from "@/pages";
+import { PrivateRoute } from "@/components/auth/private-route";
 
 type Router = ReturnType<typeof createBrowserRouter>;
 
@@ -43,5 +45,14 @@ export const router: Router = createBrowserRouter([
         element: <VerifyAccountPage />,
       },
     ],
+  },
+  {
+    id: "dashboard",
+    path: "dashboard",
+    element: (
+      <PrivateRoute>
+        <DashboardPage />
+      </PrivateRoute>
+    ),
   },
 ]);

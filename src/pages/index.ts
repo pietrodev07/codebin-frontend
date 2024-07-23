@@ -6,3 +6,6 @@ export { RegisterPage } from "./auth/register";
 export { ResetPasswordPage } from "./auth/reset";
 export { VerifyAccountPage } from "./auth/verify";
 export { ForgotPasswordPage } from "./auth/forgot";
+
+/* dashboard pages */
+export { DashboardPage } from "./dashboard";
