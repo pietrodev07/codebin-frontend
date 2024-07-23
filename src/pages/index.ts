@@ -1,1 +1,4 @@
 export { HomePage } from "./home";
+
+/* auth pages */
+export { LoginPage } from "./auth/login";
