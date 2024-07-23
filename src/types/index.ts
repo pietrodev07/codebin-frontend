@@ -1,3 +1,5 @@
+import { ChangeEvent } from "react";
+
 interface SearchParam {
   key: string;
   value: string;
@@ -16,5 +18,9 @@ export interface ContactBody {
   name: string;
   message: string;
 }
+
+export type HandleChangeEvent = ChangeEvent<
+  HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+>;
 
 export type Theme = "light" | "dark" | "system";
