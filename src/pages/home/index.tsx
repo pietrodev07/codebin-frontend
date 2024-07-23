@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import { HomeHero } from "./components/hero";
+import { HomeCards } from "./components/cards";
 import { HomeNavbar } from "./components/navbar";
 
 export const HomePage = () => {
@@ -10,6 +11,7 @@ export const HomePage = () => {
     <main className="mx-auto max-w-screen-xl">
       <HomeNavbar />
       <HomeHero handleContactModal={setIsOpen} />
+      <HomeCards />
     </main>
   );
 };
