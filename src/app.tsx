@@ -1,3 +1,6 @@
+import { RouterProvider } from "react-router-dom";
+import { router } from "./data/router";
+
 export const App = () => {
-  return <h1 className="title">Codebin</h1>;
+  return <RouterProvider router={router} />;
 };
