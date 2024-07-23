@@ -10,6 +10,10 @@
   @apply text-3xl font-bold;
 }
 
+.form {
+  @apply flex w-96 flex-col gap-6 rounded-xl border border-border bg-backgroundSecondary p-6;
+}
+
 #root {
   @apply flex min-h-svh flex-col gap-5 p-6;
 }

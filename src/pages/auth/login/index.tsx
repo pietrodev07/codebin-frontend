@@ -1,4 +1,5 @@
 import { AuthLayout } from "@/components/layout/auth-layout";
+import { LoginForm } from "./components/form";
 
 export const LoginPage = () => {
   return (
@@ -6,7 +7,7 @@ export const LoginPage = () => {
       navbar={{ registerBtn: true, forgotBtn: true }}
       className="flex items-center justify-center"
     >
-      <h1 className="title">Login Page</h1>
+      <LoginForm />
     </AuthLayout>
   );
 };
