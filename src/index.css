@@ -38,3 +38,30 @@
 *::-webkit-scrollbar-thumb:hover {
   @apply bg-gray-9;
 }
+
+.cm-editor * {
+  font-family: "Cascadia Mono";
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.ͼ1 .cm-content {
+  @apply p-0;
+}
+
+.ͼ1 .cm-lineNumbers .cm-gutterElement {
+  @apply flex min-w-full items-center justify-center px-2;
+}
+
+.ͼ1 .cm-gutter {
+  @apply min-w-[34.75px];
+}
+
+.ͼ1.cm-focused {
+  @apply outline-none;
+}
+
+.ͼ1 .cm-line {
+  @apply px-2;
+}
