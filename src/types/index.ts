@@ -16,3 +16,5 @@ export interface ContactBody {
   name: string;
   message: string;
 }
+
+export type Theme = "light" | "dark" | "system";
