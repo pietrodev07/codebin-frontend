@@ -39,6 +39,10 @@
   @apply bg-gray-9;
 }
 
+*::-webkit-scrollbar-corner {
+  @apply hidden;
+}
+
 .cm-editor * {
   font-family: "Cascadia Mono";
   font-size: 14px;
