@@ -1,6 +1,12 @@
 import { createBrowserRouter, Outlet } from "react-router-dom";
 
-import { HomePage, LoginPage, RegisterPage, ForgotPasswordPage } from "@/pages";
+import {
+  HomePage,
+  LoginPage,
+  RegisterPage,
+  ForgotPasswordPage,
+  ResetPasswordPage,
+} from "@/pages";
 
 type Router = ReturnType<typeof createBrowserRouter>;
 
@@ -26,6 +32,10 @@ export const router: Router = createBrowserRouter([
       {
         path: "forgot",
         element: <ForgotPasswordPage />,
+      },
+      {
+        path: "reset",
+        element: <ResetPasswordPage />,
       },
     ],
   },
