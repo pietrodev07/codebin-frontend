@@ -1,4 +1,5 @@
 export { HomePage } from "./home";
+export { SnippetPage } from "./snippet";
 
 /* auth pages */
 export { LoginPage } from "./auth/login";

@@ -2,6 +2,7 @@ import { createBrowserRouter, Outlet } from "react-router-dom";
 
 import {
   HomePage,
+  SnippetPage,
   LoginPage,
   RegisterPage,
   ForgotPasswordPage,
@@ -22,6 +23,10 @@ export const router: Router = createBrowserRouter([
     id: "root",
     path: "/",
     element: <HomePage />,
+  },
+  {
+    path: "snippets/:id",
+    element: <SnippetPage />,
   },
   {
     id: "auth",
